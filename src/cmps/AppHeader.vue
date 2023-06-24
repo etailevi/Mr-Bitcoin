@@ -1,9 +1,9 @@
 <template>
     <header class="app-header">
-       <div class="logo">
-       <img src="src/assets/img/Bitcoin_Cash.png" alt="">
-       <h1>itcoin</h1>
-    </div>
+        <div class="logo">
+            <img :src="imgUrl" alt="">
+            <h1>itcoin</h1>
+        </div>
         <nav class="main-nav">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/contact">Contacts</RouterLink>
@@ -14,9 +14,12 @@
 
 <script>
 export default {
+    data() {
+        return {
+            imgUrl: 'src/assets/img/Bitcoin_Cash.png',
+        }
+    }
 }
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
