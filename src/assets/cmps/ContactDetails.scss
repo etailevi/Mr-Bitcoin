@@ -1,0 +1,12 @@
+.contact-details {
+    display: grid;
+
+    margin-block: 1em;
+    padding: 10px;
+    background-color: rgb(100, 136, 138);
+    color: whitesmoke;
+
+    a {
+        justify-self: end;
+    }
+}

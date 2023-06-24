@@ -1,0 +1,45 @@
+@import './base.css';
+
+#app {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 2rem; */
+  font-weight: normal;
+  overflow-x: hidden;
+  color: darkslategray;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: darkslategray;
+  transition: 0.2s;
+}
+
+button {
+  cursor: pointer;
+  transition: .2s;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* @media (hover: hover) {
+  a:hover {
+    color: hsl(0, 0%, 100%);
+  }
+} */
+
+/* 
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */

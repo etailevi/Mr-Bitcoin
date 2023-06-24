@@ -1,0 +1,23 @@
+.user-msg {
+    position: absolute;
+    top: 10vh;
+    right: 3em;
+
+    width: 250px;
+    padding: 3px 10px;
+    border-radius: 6px;
+
+    p {
+        font-weight: 600;
+    }
+}
+
+.success {
+    background-color: rgb(100, 100, 100);
+    color: whitesmoke;
+}
+
+.fail {
+    background-color: orangered;
+    color: whitesmoke;
+}

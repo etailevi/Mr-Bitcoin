@@ -1,0 +1,48 @@
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.5em;
+    width: 100vw;
+    padding-inline: 1em;
+
+    background-image: linear-gradient(-90deg, #2ebf91, #8360c3);
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 2em;
+        }
+
+        h1 {
+            font-weight: 500;
+            color: #2ebf91;
+        }
+    }
+
+    .main-nav {
+        height: 100%;
+        display: flex;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            border-block-end: 3px solid transparent;
+            width: 80px;
+
+            &:hover,
+            &.router-link-active {
+                border-block-end: 3px solid whitesmoke;
+                color: whitesmoke;
+            }
+
+            &.router-link-active {
+                font-weight: 500;
+            }
+        }
+    }
+}
