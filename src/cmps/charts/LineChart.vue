@@ -56,9 +56,9 @@ export default {
 <style lang="scss">
 .chart {
     margin: auto;
-    margin-block: 3.5em;
+    margin-block: 3em;
     max-width: 800px;
-    height: 30rem;
+    max-height: 30rem;
     padding: 2.4rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     background-color: rgba(228, 228, 228, 0.766);

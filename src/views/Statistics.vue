@@ -79,9 +79,9 @@ export default {
 </style> -->
 
 <template>
-    <div class="charts">
-        <!-- <h1>Stats</h1> -->
-        <div v-if="priceHistory && avgBlockSize">
+    <div class="stats">
+        <h1>Bitcoin Stats</h1>
+        <div class="charts">
             <LineChart :chartData="priceHistoryData" />
             <LineChart :chartData="avgBlockSizeData" />
         </div>
@@ -146,4 +146,15 @@ export default {
 };
 </script>
   
-<style></style>
+<style lang="scss">
+.stats {
+    h1 {
+        text-align: center;
+        margin-block-start: 15px;
+    }
+
+    .charts {
+        padding-inline: 4em;
+    }
+}
+</style>
