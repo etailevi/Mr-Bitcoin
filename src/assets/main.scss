@@ -1,9 +1,15 @@
-@import './cmps/ContactIndex';
+// Setup
+@import './setup/Variables';
+
+// Views
+@import './views/ContactIndex';
+@import './views/ContactDetails';
+@import './views/ContactEdit';
+
+// Cmps
 @import './cmps/AppHeader';
 @import './cmps/AppFooter';
 @import './cmps/ContactList';
 @import './cmps/ContactPreview';
-@import './cmps/ContactDetails';
-@import './cmps/ContactEdit';
 @import './cmps/ContactFilter';
 @import './cmps/UserMsg';

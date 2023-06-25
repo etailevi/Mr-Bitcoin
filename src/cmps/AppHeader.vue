@@ -2,7 +2,7 @@
     <header class="app-header">
         <div class="logo">
             <img :src="imgUrl" alt="">
-            <h1>itcoin</h1>
+            <h1>bitcoin</h1>
         </div>
         <nav class="main-nav">
             <RouterLink to="/">Home</RouterLink>

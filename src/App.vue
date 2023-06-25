@@ -10,11 +10,13 @@ export default {
 </script>
 
 <template>
-    <AppHeader />
-    <main class="main-content">
-        <RouterView />
-    </main>
-    <AppFooter />
+    <div>
+        <AppHeader />
+        <main class="main-content">
+            <RouterView />
+        </main>
+        <AppFooter />
+    </div>
 </template>
 
 <style scoped>
