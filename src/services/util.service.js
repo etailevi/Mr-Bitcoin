@@ -4,6 +4,7 @@ export const utilService = {
     getRandomIntInclusive,
     loadFromStorage,
     saveToStorage,
+    clearStorage,
     padNum,
     getDayName,
     getMonthName,
@@ -44,6 +45,10 @@ function saveToStorage(key, value) {
 function loadFromStorage(key) {
     const data = localStorage.getItem(key)
     return (data) ? JSON.parse(data) : undefined
+}
+
+function clearStorage(key) {
+    localStorage.removeItem(key)
 }
 
 function padNum(num) {
