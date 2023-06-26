@@ -11,7 +11,8 @@
                 <!-- <nav class="main-nav"> -->
                 <RouterLink to="/home">Home</RouterLink>
                 <RouterLink to="/contact">Contacts</RouterLink>
-                <RouterLink to="/stats">Statistics</RouterLink> |
+                <RouterLink to="/stats">Statistics</RouterLink>
+                <span>|</span>
                 <RouterLink to="/" @click="logout">Logout</RouterLink>
             </nav>
         </header>
