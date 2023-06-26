@@ -22,6 +22,7 @@ button {
   border: none;
   padding: 5px;
   border-radius: 3px;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 /* @media (hover: hover) {

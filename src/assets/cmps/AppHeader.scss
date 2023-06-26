@@ -11,17 +11,22 @@
     .logo {
         display: flex;
         align-items: center;
-        gap: 2px;
+        padding: 5px;
 
         img {
-            height: 1.5em;
-            rotate: 27deg;
+            height: 1.8em;
         }
 
         h1 {
-            font-weight: 500;
-            color: darken($clr8, 5%);
+            font-family: Ubuntu, sans-serif;
+            font-weight: 600;
+            font-size: 2em;
+            color: darken($clr4, 15%);
             font-style: italic;
+        }
+
+        &:hover {
+            background-color: rgba(235, 235, 235, 0.218);
         }
     }
 
@@ -39,8 +44,8 @@
 
             &:hover,
             &.router-link-active {
-                border-block-end: 3px solid whitesmoke;
-                color: whitesmoke;
+                border-block-end: 3px solid $clr3;
+                color: $clr3;
             }
 
             &.router-link-active {

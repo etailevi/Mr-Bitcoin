@@ -41,15 +41,12 @@ async function getMarketPriceHistory() {
     const lastRequest = gBitcoinData?.priceHistory?.reqTimeStamp
 
     if (priceHistory && Date.now() - lastRequest < CACHE_TIME) {
-        console.log('priceHistory.data:', priceHistory.data)
-
         return priceHistory.data
     } else {
         try {
             const response = await axios.get(
-                'https://api.blockchain.info/charts/market-price?timespan=12months&format=json&cors=true'
+                'https://api.blockchain.info/charts/market-price?timespan=48days&format=json&cors=true'
             )
-            console.log('response:', response)
 
             gBitcoinData.priceHistory = {
                 data: response.data,
@@ -73,7 +70,7 @@ async function getAvgBlockSize() {
     } else {
         try {
             const response = await axios.get(
-                'https://api.blockchain.info/charts/avg-block-size?timespan=12months&format=json&cors=true'
+                'https://api.blockchain.info/charts/avg-block-size?timespan=48days&format=json&cors=true'
             )
             gBitcoinData.avgBlockSize = {
                 data: response.data,

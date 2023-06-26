@@ -1,12 +1,47 @@
 .contact-details {
-    display: grid;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    // padding: 10px;
+    background-color: $clr7;
+    border-radius: .3em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    break-inside: avoid;
+    margin: 15px auto;
+    width: 340px;
+    height: 130px;
 
-    margin-block: 1em;
-    padding: 10px;
-    background-color: rgb(100, 136, 138);
-    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: $clr8;
+    gap: 8px;
 
-    a {
-        justify-self: end;
+    .contact-info {
+        h2 {
+            font-weight: 700;
+        }
+
+        h3 {
+            color: lightgrey;
+            font-size: .9rem;
+        }
+    }
+
+    .contact-img {
+        display: flex;
+    }
+
+    button {
+        position: absolute;
+        right: 0;
+        top: -3px;
+        background-color: transparent;
+        color: whitesmoke;
+
+        &:hover {
+            color: $clr9;
+            scale: 1.1;
+        }
     }
 }

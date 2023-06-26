@@ -1,8 +1,22 @@
 .contact-preview {
-    color: whitesmoke;
-    gap: 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: $clr8;
+    gap: 8px;
 
-    h2 {
-        font-weight: 700;
+    .contact-info {
+        h2 {
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: .9rem;
+            color: lightgray;
+        }
+    }
+
+    .contact-img {
+        display: flex;
     }
 }

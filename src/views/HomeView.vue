@@ -1,9 +1,13 @@
 <template>
-  <main class="home">
-    <img :src='`https://robohash.org/${user._id}?set=set1&size=100x100`' :alt='user.name'>
-    <h1>{{ this.user.name }}</h1>
-    <h3>Balance: {{ this.user.balance }}$</h3>
-    <h4>Bitcoin Rate: {{ this.rate }}</h4>
+  <main class="contact-details">
+    <div class="contact-img">
+      <img :src='`https://robohash.org/${user._id}?set=set1&size=130x130`' :alt='user.name'>
+    </div>
+    <div class="contact-info">
+      <h2>{{ this.user.name }}</h2>
+      <h3>Balance: {{ this.user.balance }}$</h3>
+      <h3>Bitcoin Rate: {{ this.rate }}</h3>
+    </div>
   </main>
 </template>
 
@@ -18,13 +22,11 @@ export default {
       rate: null,
     }
   },
-  created() {
+  async created() {
     this.user = userService.getUser()
-    this.rate = bitcoinService.getRate()
+    this.rate = await bitcoinService.getRate()
   }
 }
 </script>
 
-<style lang="scss">
-.home {}
-</style>
+<style lang="scss"></style>

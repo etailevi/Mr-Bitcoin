@@ -18,7 +18,7 @@ export default {
     methods: {
         showMsg(msg) {
             this.msg = msg
-            // setTimeout(() => (this.msg = null), msg.timeout || 1500)
+            setTimeout(() => (this.msg = null), msg.timeout || 1500)
         },
     },
     computed: {
@@ -43,6 +43,7 @@ export default {
 .user-msg {
     transform-origin: right;
 }
+
 .v-enter-active,
 .v-leave-active {
     transition: 0.8s ease;

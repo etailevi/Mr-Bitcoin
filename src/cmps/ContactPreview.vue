@@ -1,7 +1,7 @@
 <template>
     <article class="contact-preview">
         <div class="contact-img">
-            <img :src='`https://robohash.org/${contact._id}?set=set1&size=100x100`' :alt='contact.name'>
+            <img :src='`https://robohash.org/${contact._id}?set=set1&size=130x130`' :alt='contact.name'>
         </div>
         <div class="contact-info">
             <h2>{{ contact.name }}</h2>
@@ -20,21 +20,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.contact-preview {
-    display: flex;
-
-    .contact-img {
-        img {
-            height: 100%;
-            border-radius: .3em;
-        }
-    }
-
-    .contact-info {
-        h3 {
-            font-size: 1rem;
-        }
-    }
-}
-</style>
+<style lang="scss"></style>

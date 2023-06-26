@@ -1,8 +1,7 @@
 <template>
     <section class="contact-filter">
-        <p>Search: </p>
-        <input @input="onSetFilterBy" v-model="filterBy.term" type="text" placeholder="By contact">
-        <select @change="onSetFilterBy" v-model="filterBy.criteria">
+        <input @input="onSetFilterBy" v-model="filterBy.term" type="text" class="input-style" placeholder="By contact">
+        <select @change="onSetFilterBy" class="input-style" v-model="filterBy.criteria">
             <option value="name">Name</option>
             <option value="phone">Phone</option>
             <option value="email">Email</option>

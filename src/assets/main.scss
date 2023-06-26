@@ -2,9 +2,11 @@
 @import './setup/Variables';
 
 // Views
+@import './views/HomeView';
 @import './views/ContactIndex';
 @import './views/ContactDetails';
 @import './views/ContactEdit';
+@import './views/Statistics';
 
 // Cmps
 @import './cmps/AppHeader';

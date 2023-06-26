@@ -2,7 +2,7 @@
     <div class="contact-index">
         <UserMsg />
         <ContactFilter @filter="onSetFilterBy" />
-        <RouterLink to="/contact/edit"><button class="add-contact">Add Contact</button></RouterLink>
+        <RouterLink to="/contact/edit"><button class="button-name">Add Contact</button></RouterLink>
         <ContactList @remove="removeContact" v-if="contacts" :contacts="filteredContacts" />
     </div>
 </template>
