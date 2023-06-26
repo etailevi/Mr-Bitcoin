@@ -18,7 +18,7 @@
 export default {
     data() {
         return {
-            imgUrl: 'src/assets/img/Bitcoin_Cash.svg',
+            imgUrl: '/public/imgs/Bitcoin_Cash.svg',
         }
     }
 }

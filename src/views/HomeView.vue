@@ -5,8 +5,8 @@
     </div>
     <div class="contact-info">
       <h2>{{ this.user.name }}</h2>
-      <h3>Balance: {{ this.user.balance }}$</h3>
-      <h3>Bitcoin Rate: {{ this.rate }}</h3>
+      <h3>Balance: <span>{{ this.user.balance }}$</span></h3>
+      <h3>Bitcoin Rate: <span>{{ this.rate }}</span></h3>
     </div>
   </main>
 </template>
