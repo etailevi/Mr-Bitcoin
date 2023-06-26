@@ -19,7 +19,6 @@ import { bitcoinService } from '../services/bitcoinService'
 export default {
     data() {
         return {
-            contacts: null,
             filterBy: {},
             priceHistory: null,
             avgBlockSize: null
@@ -27,17 +26,22 @@ export default {
     },
     methods: {
         async removeContact(contactId) {
-            const contact = await contactService.get(contactId)
-            const msg = {
-                txt: `The contact ${contact.name} removed...`,
-                type: 'success',
-                timeout: 2500,
+            try {
+                this.$store.dispatch({ type: 'removeContact', contactId })
+                const msg = {
+                    txt: `Contact has removed...`,
+                    type: 'success',
+                    timeout: 2500,
+                }
+                eventBus.emit('user-msg', msg)
+            } catch (err) {
+                const msg = {
+                    txt: `Cannot remove contact`,
+                    type: 'fail',
+                    timeout: 2500,
+                }
+                eventBus.emit('user-msg', msg)
             }
-            await contactService.remove(contactId)
-
-            const idx = this.contacts.findIndex(contact => contact.id === contactId)
-            this.contacts.splice(idx, 1)
-            eventBus.emit('user-msg', msg)
         },
         onSetFilterBy(filterBy) {
             this.filterBy = filterBy
@@ -48,12 +52,10 @@ export default {
             const regex = new RegExp(this.filterBy.term, 'i')
             return this.contacts.filter(contact => regex.test(contact[this.filterBy.criteria]))
         },
-        getContacts() {
-            return this.contacts
-        }
+        contacts() { return this.$store.getters.contacts }
     },
     async created() {
-        this.contacts = await contactService.query()
+        this.$store.dispatch({ type: 'loadContacts' })
         this.rate = bitcoinService.getRate()
         this.priceHistory = bitcoinService.getMarketPriceHistory()
         this.avgBlockSize = bitcoinService.getAvgBlockSize()
@@ -66,4 +68,4 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>../services/bitcoinService
+<style lang="scss"></style>

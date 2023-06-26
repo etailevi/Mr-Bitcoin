@@ -2,7 +2,7 @@
     <header class="app-header">
         <div>
             <RouterLink to="/" class="logo">
-                <img :src="imgUrl" alt="">
+                <img :src="imgUrl" alt="logo">
                 <h1>bitcoin</h1>
             </RouterLink>
         </div>
